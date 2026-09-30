@@ -1,0 +1,65 @@
+HETHERINGTON POST - SEPTEMBER 2026
+Deployment instructions for the web developer
+=============================================
+
+1. WHERE IT MUST LIVE
+The page must be served at exactly:
+
+    https://hetherington.net.au/post/september-2026/
+
+This exact URL matters. The email (EDM) that goes to the client database
+links to this URL and its section anchors, and loads its images from this
+URL's assets folder. If the page is deployed at any other path, a different
+slug, or a GitHub Pages URL, the email's images will not load and its links
+will not land. Same pattern as the July edition at /post/july-2026/.
+
+2. WHAT TO UPLOAD
+From the zip, upload so the structure is:
+
+    /post/september-2026/index.html
+    /post/september-2026/assets/   (all 19 files, names unchanged)
+
+Do not rename any files. The hosting is case sensitive and every reference
+is lowercase, so keep filenames exactly as supplied.
+EDM.html in the zip is the email build only. It does not need to be
+uploaded to the site, it is sent through the email platform.
+
+3. LINKS INSIDE THE PAGE
+No changes needed, for reference these all resolve automatically once the
+page is at the correct URL:
+    - Section anchors: #editor #diggers #events #people #regulatory #cases #contact
+    - Logo and David's headshot load from the existing WordPress media library
+    - The Kalgoorlie flyover video streams from Vimeo (video ID 1231485569,
+      embedded with its access hash). Nothing to upload for it.
+      If the player ever shows "private video", the video's privacy setting
+      in the Vimeo account must allow embedding on hetherington.net.au.
+
+4. LINKS IN THE EDM (for whoever loads the email)
+    - Every link points at https://hetherington.net.au/post/september-2026/
+      with section anchors. Do not rewrite them.
+    - Email images load from https://hetherington.net.au/post/september-2026/assets/
+      so the page must be live BEFORE the email is sent.
+    - Replace {{UNSUBSCRIBE_URL}} with the email platform's merge tag.
+
+5. SMOKE TEST AFTER DEPLOY (2 minutes)
+    a. Open https://hetherington.net.au/post/september-2026/ on desktop
+    b. Open https://hetherington.net.au/post/september-2026/assets/og-image.jpg
+       directly. If this loads, the EDM's images will load too.
+    c. Open the page on a phone. Photos should appear immediately without
+       touching the screen, and the Diggers video should play.
+    d. Click "Read the full update" on one regulatory card to confirm the
+       expanders work.
+
+6. WORDPRESS LISTING (archive page)
+    Title:    September 2026
+    Slug:     /september-2026/  (under /post/)
+    Excerpt:  From the Goldfields to the Courtroom: Diggers & Dealers in
+              Kalgoorlie, the NSW Mining HSEC Conference, WIMNet's Lessons
+              in Leadership, three admissions to the Supreme Courts, and
+              regulatory updates across NSW and WA.
+    Meta title:       The Hetherington Post - September 2026 | Hetherington
+    Meta description: From the Goldfields to the Courtroom: Diggers & Dealers
+                      in Kalgoorlie, the HSEC Conference, three admissions,
+                      the Kelly Review, and NSW regulatory updates.
+
+Questions: reply to Rowayne at GYA.
